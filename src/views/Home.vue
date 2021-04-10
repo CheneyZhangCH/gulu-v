@@ -5,8 +5,8 @@
             <h1>gulu-v</h1>
             <h2>ugly-design</h2>
             <p class="actions">
-                <a href="">Github</a>
-                <a href="">开始</a>
+                <a href="https://github.com/CheneyZhangCH/gulu-v" target="_blank">Github</a>
+                <router-link to="/doc" >开始</router-link>
             </p>
         </div>
     </div>
