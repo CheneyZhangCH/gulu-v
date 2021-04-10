@@ -34,7 +34,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    height: 54px;
+    padding: 0 16px;
     > .logo {
         max-width: 6em;
         margin-right: auto;
@@ -49,8 +50,7 @@ export default {
     }
     > .toggleAside {
         display: none;
-        width: 24px;
-        height: 24px;
+        height: 100%;
         align-items: center;
         justify-content: center;
     }
