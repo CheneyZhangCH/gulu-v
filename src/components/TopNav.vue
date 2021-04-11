@@ -1,11 +1,11 @@
 <template>
     <div class="top-nav">
         <span class="toggleAside" @click="toggleMenu"><i class="iconfont icon-toggle"/></span>
-        <div class="logo">Logo</div>
-        <ul class="menu">
-            <li>菜单1</li>
-            <li>菜单2</li>
-        </ul>
+        <div class="logo">Gulu</div>
+        <div class="menu">
+            <router-link to="doc">文档</router-link>
+            <router-link to="/">首页</router-link>
+        </div>
     </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 54px;
+    height: 56px;
     padding: 0 16px;
     > .logo {
         max-width: 6em;
@@ -44,7 +44,7 @@ export default {
         display: flex;
         white-space: nowrap;
         flex-wrap: nowrap;
-        > li {
+        > a {
             margin: 0 1em;
         }
     }
