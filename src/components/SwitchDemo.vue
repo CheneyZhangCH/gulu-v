@@ -1,6 +1,6 @@
 <template>
     <div>Switch 文档</div>
-    <Switch :value="y" @input="(event) => y = event"/>
+    <Switch v-model:value="y"/>
 </template>
 
 <script lang="ts">
