@@ -1,20 +1,38 @@
 <template>
+  <div>Switch 文档</div>
   <h1>示例1</h1>
   <div>
-    <Button>你好</Button>
+    <Button
+        @click="onClick"
+        @focus="onFocus"
+        @mouseenter="onMouseEnter"
+    >你好
+    </Button>
   </div>
 </template>
 
 <script lang="ts">
 import Button from '../lib/Button.vue'
-import { ref } from 'vue'
 
 export default {
   components: {
     Button,
   },
   setup() {
-    return {}
+    const onClick = () => {
+      console.log('onClick')
+    }
+    const onFocus = () => {
+      console.log('onFocus')
+    }
+    const onMouseEnter = () => {
+      console.log('onMouseEnter')
+    }
+    return {
+      onClick,
+      onFocus,
+      onMouseEnter,
+    }
   },
 }
 </script>
