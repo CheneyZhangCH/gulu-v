@@ -2,12 +2,10 @@
   <div>Switch 文档</div>
   <h1>示例1</h1>
   <div>
-    <Button
-        @click="onClick"
-        @focus="onFocus"
-        @mouseenter="onMouseEnter"
-    >你好
-    </Button>
+    <Button @click="onClick" @focus="onFocus" @mouseenter="onMouseEnter">按钮</Button>
+    <Button theme="button" @click="onClick" @focus="onFocus" @mouseenter="onMouseEnter">按钮</Button>
+    <Button theme="text" @click="onClick" @focus="onFocus" @mouseenter="onMouseEnter">文字</Button>
+    <Button theme="link" @click="onClick" @focus="onFocus" @mouseenter="onMouseEnter">链接</Button>
   </div>
 </template>
 
