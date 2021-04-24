@@ -1,21 +1,21 @@
 <template>
-    <button :class="{checked: value}" @click="toggle"><span/></button>
+  <button :class="{checked: value}" @click="toggle"><span/></button>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'Switch',
-    props: {
-        value: Boolean,
-    },
-    setup(props, context) {
-        const toggle = () => {
-            context.emit('update:value', !props.value)
-        }
-        return {
-            toggle,
-        }
-    },
+  name: 'Switch',
+  props: {
+    value: Boolean,
+  },
+  setup(props, context) {
+    const toggle = () => {
+      context.emit('update:value', !props.value)
+    }
+    return {
+      toggle,
+    }
+  },
 }
 </script>
 
@@ -23,20 +23,13 @@ export default {
 $h: 22px;
 $h2: $h - 4px;
 button {
-    height: $h;
-    width: $h*2;
-    border: none;
-    background: #bfbfbf;
-    border-radius: $h/2;
-    position: relative;
-    &.checked {
-        background: #1890ff;
-        > span {
-            left: calc(100% - #{$h} + 2px);
-        }
-    }
-}
-span {
+  height: $h;
+  width: $h*2;
+  border: none;
+  background: #bfbfbf;
+  border-radius: $h/2;
+  position: relative;
+  & > span {
     position: absolute;
     top: 2px;
     left: 2px;
@@ -45,17 +38,22 @@ span {
     background: white;
     border-radius: $h2 / 2;
     transition: all 250ms;
-}
-button:focus {
+  }
+  &:focus {
     outline: none;
-}
-
-button:active{
-  > span {width: $h2 + 4px;}
-}
-
-button.checked:active{
-  > span {width: $h2 + 4px; margin-left: -4px;}
+  }
+  &:active {
+    > span {width: $h2 + 4px;}
+  }
+  &.checked {
+    background: #1890ff;
+    > span {
+      left: calc(100% - #{$h} + 2px);
+    }
+    &:active {
+      > span {width: $h2 + 4px; margin-left: -4px;}
+    }
+  }
 }
 
 </style>

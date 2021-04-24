@@ -80,6 +80,7 @@ aside {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
     height: 100%;
     > h2 {
         margin-bottom: 4px;
